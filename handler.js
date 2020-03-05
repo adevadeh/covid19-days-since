@@ -92,6 +92,14 @@ module.exports.daysSince = (event, context, callback) => {
 
   </style>
 
+  <script type="text/javascript">
+
+    function changeLoc(newLoc) {
+      window.location = window.location.pathname + "";
+    }
+
+  </script>
+
 </head>
 
 <body>
@@ -103,14 +111,14 @@ module.exports.daysSince = (event, context, callback) => {
     <h1>${days}</h1>
 
     <h3>days since the last new infection in <strong>${location}</strong></h3>
-    
+        
+    <img id="meme" src="${memeImg}"/>
+
     <p>
       time: ${currentTime}</br>
       source: <a href="https://github.com/CSSEGISandData/COVID-19">https://github.com/CSSEGISandData/COVID-19</a>
     </p>
     
-    <img id="meme" src="${memeImg}"/>
-
 
    </div>
   
