@@ -11,10 +11,14 @@
   ];
 
   const data = {
-    'GUANGZHOU'     : 9,
-    'GUANGDONG'     : 4,
+    'GUANGZHOU'     : 0,
+    'GUANGDONG'     : 0,
+    'WUHAN'         : 0,
+    'BEIJING'       : 0,
+    'SHANGHAI'      : 0,
     'CHINA'         : 0,
     'UNITED STATES' : 0,
+    'SOUTH KOREA'   : 0,
     'ITALY'         : 0
   };
 
