@@ -14,3 +14,6 @@ functions:
       - http:
           method: get
           path: /
+
+plugins:
+  - serverless-offline
