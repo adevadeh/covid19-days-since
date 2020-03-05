@@ -12,7 +12,7 @@
 
   const data = {
     'GUANGZHOU'     : 9,
-    'GUANGDONG'     : 3,
+    'GUANGDONG'     : 4,
     'CHINA'         : 0,
     'UNITED STATES' : 0,
     'ITALY'         : 0
@@ -34,14 +34,13 @@ module.exports.daysSince = (event, context, callback) => {
 
   let locationOptions = ""
   for (const loc of locations){
-    selected = (loc == selectedLocation ? "selected " : "");
+    const selected = (loc == selectedLocation ? "selected " : "");
     locationOptions += `<option ${selected}value=\"${loc}\">${loc}</option>`
   }
 
-
   const locationSelect = `
   <label for="location">Location: </label>
-  <select id="location" name="location">
+  <select id="location" name="location" onChange="changeLoc(value)">
     ${locationOptions}
   </select>`;
 
@@ -95,7 +94,7 @@ module.exports.daysSince = (event, context, callback) => {
   <script type="text/javascript">
 
     function changeLoc(newLoc) {
-      window.location = window.location.pathname + "";
+      window.location = window.location.pathname + "?location="+newLoc;
     }
 
   </script>
@@ -110,8 +109,8 @@ module.exports.daysSince = (event, context, callback) => {
   
     <h1>${days}</h1>
 
-    <h3>days since the last new infection in <strong>${location}</strong></h3>
-        
+    <h3>days since the last new infection in <strong>${selectedLocation}</strong></h3>
+
     <img id="meme" src="${memeImg}"/>
 
     <p>
