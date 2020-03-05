@@ -30,5 +30,8 @@ Data sourced from the excellent data department at John's Hopkins: https://githu
 If you wish to contribute, pull requests are welcome. 
 If interested in collaboration, contact jinyaodesandies@gmail.com
 
+### Getting Started
 
-
+$ npm install
+$ sls offline
+$ open http://localhost:3000
