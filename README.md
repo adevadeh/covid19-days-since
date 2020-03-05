@@ -28,3 +28,5 @@ Data sourced from the excellent data department at John's Hopkins: https://githu
 ### Contributions
 
 If you wish to contribute, pull requests are welcome. 
+IF INTRISTED IN buying website or thank us, contact jinyaodesandies@gmail.com
+
