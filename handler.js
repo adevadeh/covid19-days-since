@@ -28,7 +28,10 @@ module.exports.daysSince = (event, context, callback) => {
     selectedLocation = event.queryStringParameters.location;
   } 
 
-  let days = data[selectedLocation.toUpperCase()] || "NO DATA";
+  let days = data[selectedLocation.toUpperCase()] 
+  if (days == undefined) {
+    days = ("<small>NO DATA for: "+selectedLocation.toUpperCase()+"</small>");
+  }
 
   let memeImg = memes[~~(Math.random() * memes.length)];
 
@@ -66,7 +69,6 @@ module.exports.daysSince = (event, context, callback) => {
       font-size: 1000%;
       text-align: center;
       vertical-align: bottom;
-      line-height: 1em;
       margin-top: 0;
       margin-bottom: 0;
     }
@@ -82,7 +84,7 @@ module.exports.daysSince = (event, context, callback) => {
     }
 
     div#header {
-      margin-bottom: 2em;
+      margin-bottom: 1em;
     }
 
     img#meme {
@@ -109,7 +111,10 @@ module.exports.daysSince = (event, context, callback) => {
   
     <h1>${days}</h1>
 
-    <h3>days since the last new infection in <strong>${selectedLocation}</strong></h3>
+    <h3>
+      days since the last new infection in</br> 
+      <strong>${selectedLocation}</strong>
+    </h3>
 
     <img id="meme" src="${memeImg}"/>
 
