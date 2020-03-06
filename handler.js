@@ -10,17 +10,10 @@
     "https://66.media.tumblr.com/316f60a4fc954a98097cd432eeac1ee7/tumblr_ow148rGmiy1u2x68ro1_400.gifv"
   ];
 
-  const data = {
-    'GUANGZHOU'     : 0,
-    'GUANGDONG'     : 0,
-    'WUHAN'         : 0,
-    'BEIJING'       : 0,
-    'SHANGHAI'      : 0,
-    'CHINA'         : 0,
-    'UNITED STATES' : 0,
-    'SOUTH KOREA'   : 0,
-    'ITALY'         : 0
-  };
+  const load_data   = require("./current_data.json");
+  const data        = load_data["locations"];
+  const updated_at  = Date.parse(load_data["updated_at"]).toTimeString();
+
 
 module.exports.daysSince = (event, context, callback) => {
   let currentTime = new Date().toTimeString();
@@ -66,24 +59,25 @@ module.exports.daysSince = (event, context, callback) => {
  <style type="text/css"> 
     body { 
       background-color: powderblue; 
-      font-family: helvetica, sans-serif;
-      font-size: 16pt;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 18pt;
     } 
     h1 {
-      font-size: 1000%;
-      text-align: center;
-      vertical-align: bottom;
-      margin-top: 0;
-      margin-bottom: 0;
+      font-size: 800%;
+      border: black solid 2px;
+      background-color: #fafafa; 
+      width: 50%;
+      margin: 5% 25%;
     }
     h3 {
-      font-size: 200%;
-      text-align: center;
+      font-size: 160%;
       font-weight: normal;
+      margin-top: 0;
+      margin-bottom: 1em;
     }
 
     div#content {
-      width:36em; 
+      width:28em; 
       margin:2em auto;
     }
 
@@ -91,8 +85,20 @@ module.exports.daysSince = (event, context, callback) => {
       margin-bottom: 1em;
     }
 
+    select#location {
+      font-size: 18pt;
+    }
+
+    div.center {
+      text-align:center;
+    }
+
     img#meme {
-      width: 36em;
+      width: 28em;
+    }
+
+    p.extra {
+      font-size: 80%
     }
 
   </style>
@@ -112,19 +118,25 @@ module.exports.daysSince = (event, context, callback) => {
     <div id="header">
       ${locationSelect}
     </div>
-  
-    <h1>${days}</h1>
+   
+    <div class="center">
+    
+      <h1>${days}</h1>
 
-    <h3>
-      days since the last new infection in</br> 
-      <strong>${selectedLocation}</strong>
-    </h3>
+      <h3>
+        days since the last new infection in<br/> 
+        <strong>${selectedLocation}</strong>
+      </h3>
 
-    <img id="meme" src="${memeImg}"/>
+      <img id="meme" src="${memeImg}"/>
 
-    <p>
-      time: ${currentTime}</br>
-      source: <a href="https://github.com/CSSEGISandData/COVID-19">https://github.com/CSSEGISandData/COVID-19</a>
+    </div>
+
+    <p class="extra">
+      server time: ${updated_at}</br>
+      sources: <br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/CSSEGISandData/COVID-19">https://github.com/CSSEGISandData/COVID-19</a><br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/BlankerL/DXY-COVID-19-Data">https://github.com/BlankerL/DXY-COVID-19-Data</a>
     </p>
     
 
