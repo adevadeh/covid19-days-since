@@ -134,7 +134,7 @@ module.exports.daysSince = (event, context, callback) => {
     </div>
 
     <p class="extra">
-      server time: ${updated_at}</br>
+      last updated: ${updated_at}</br>
       sources: <br/>
       &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/CSSEGISandData/COVID-19">https://github.com/CSSEGISandData/COVID-19</a><br/>
       &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/BlankerL/DXY-COVID-19-Data">https://github.com/BlankerL/DXY-COVID-19-Data</a>
