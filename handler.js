@@ -13,11 +13,10 @@
   const load_data   = require("./current_data.json");
   const data        = load_data["locations"];
   const updated_at_d= new Date(Date.parse(load_data["updated_at"]));
-  const updated_at  = updated_at_d.toTimeString();
+  const updated_at  = updated_at_d.toString();
 
 
 module.exports.daysSince = (event, context, callback) => {
-  let currentTime = new Date().toTimeString();
   let locations = Object.keys(data);
   let selectedLocation = locations[0];
 
