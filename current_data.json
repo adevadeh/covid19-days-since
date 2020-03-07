@@ -1,15 +1,15 @@
 {
-    "updated_at": "2020-03-06 22:42:00", 
+    "updated_at": "2020-03-07", 
     "locations": {
-        "GUANGZHOU"     : 0,
-        "GUANGZHOU"     : 0,
-        "GUANGDONG"     : 0,
-        "WUHAN"         : 0,
-        "BEIJING"       : 0,
-        "SHANGHAI"      : 0,
-        "CHINA"         : 0,
-        "UNITED STATES" : 0,
-        "SOUTH KOREA"   : 0,
-        "ITALY"         : 0
+        "GUANGZHOU"     : "2020-03-06",
+        "SHENZHEN"      : "2020-03-06",
+        "GUANGDONG"     : "2020-03-07",
+        "WUHAN"         : "2020-03-07",
+        "BEIJING"       : "2020-03-07",
+        "SHANGHAI"      : "2020-03-07",
+        "CHINA"         : "2020-03-07",
+        "UNITED STATES" : "2020-03-07",
+        "SOUTH KOREA"   : "2020-03-07",
+        "ITALY"         : "2020-03-07"
     }
 }

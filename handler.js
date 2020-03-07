@@ -25,10 +25,18 @@ module.exports.daysSince = (event, context, callback) => {
     selectedLocation = event.queryStringParameters.location;
   } 
 
-  let days = data[selectedLocation.toUpperCase()] 
-  if (days == undefined) {
+  let last_day  = data[selectedLocation.toUpperCase()];
+  let days      = 0;
+  if (last_day == undefined) {
     days = ("<small>NO DATA for: "+selectedLocation.toUpperCase()+"</small>");
+  } else {
+    //Get 1 day in milliseconds
+    var one_day = 1000*60*60*24;
+    last_day    = new Date(last_day);
+    days        = ~~((new Date() - last_day)/one_day);
   }
+  
+
 
   let memeImg = memes[~~(Math.random() * memes.length)];
 
