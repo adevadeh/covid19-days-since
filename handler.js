@@ -34,6 +34,9 @@ module.exports.daysSince = (event, context, callback) => {
     var one_day = 1000*60*60*24;
     last_day    = new Date(last_day);
     days        = ~~((new Date() - last_day)/one_day);
+    if (days > 0) {
+      days = days - 1; //don't count the current (not yet over) day
+    }
   }
   
 
