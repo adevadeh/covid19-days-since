@@ -23,7 +23,8 @@ module.exports.daysSince = (event, context, callback) => {
   // check for GET params and use if available
   if (event.queryStringParameters && event.queryStringParameters.location) {
     selectedLocation = event.queryStringParameters.location;
-  } 
+  }
+
 
   let last_day  = data[selectedLocation.toUpperCase()];
   let days      = 0;
@@ -38,7 +39,7 @@ module.exports.daysSince = (event, context, callback) => {
       days = days - 1; //don't count the current (not yet over) day
     }
   }
-  
+
 
 
   let memeImg = memes[~~(Math.random() * memes.length)];
@@ -67,16 +68,16 @@ module.exports.daysSince = (event, context, callback) => {
   <meta name="description" content="COVID-19 Info">
   <meta name="author" content="Kudelabs">
 
- <style type="text/css"> 
-    body { 
-      background-color: powderblue; 
+ <style type="text/css">
+    body {
+      background-color: rgb(221,221,241);
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 18pt;
-    } 
+    }
     h1 {
       font-size: 800%;
       border: black solid 2px;
-      background-color: #fafafa; 
+      background-color: #121389;
       width: 50%;
       margin: 5% 25%;
     }
@@ -88,7 +89,7 @@ module.exports.daysSince = (event, context, callback) => {
     }
 
     div#content {
-      width:28em; 
+      width:28em;
       margin:2em auto;
     }
 
@@ -129,30 +130,27 @@ module.exports.daysSince = (event, context, callback) => {
     <div id="header">
       ${locationSelect}
     </div>
-   
-    <div class="center">
-    
-      <h1>${days}</h1>
 
-      <h3>
-        days since the last new infection in<br/> 
-        <strong>${selectedLocation}</strong>
-      </h3>
+    <h1>${days}</h1>
+
+    <h3>
+      days since the last new infection in</br>
+      <strong>${selectedLocation}</strong>
+    </h3>
 
       <img id="meme" src="${memeImg}"/>
 
     </div>
-
     <p class="extra">
       last updated: ${updated_at}</br>
       sources: <br/>
       &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/CSSEGISandData/COVID-19">https://github.com/CSSEGISandData/COVID-19</a><br/>
       &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/BlankerL/DXY-COVID-19-Data">https://github.com/BlankerL/DXY-COVID-19-Data</a>
     </p>
-    
+    <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_pc_3">more data</a>
 
    </div>
-  
+
 </body>
 </html>`;
 
