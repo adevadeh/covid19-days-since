@@ -35,5 +35,7 @@ If interested in collaboration, contact jinyaodesandies@gmail.com
 ### Getting Started
 
 $ npm install
+
 $ sls offline
+
 $ open http://localhost:3000
