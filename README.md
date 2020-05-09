@@ -19,6 +19,8 @@ This is a trivial example site built to practice with new technologies and give 
 
 Data sourced from the excellent data department at John's Hopkins: https://github.com/CSSEGISandData/COVID-19
 
+Data also provided by: https://github.com/BlankerL/DXY-COVID-19-Data
+
 ### Goals:
 * M1 - deploy a function to AWS Lambda
 * M2 - make it minimally functional
