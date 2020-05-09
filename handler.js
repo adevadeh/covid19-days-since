@@ -75,7 +75,7 @@ module.exports.daysSince = (event, context, callback) => {
       font-size: 18pt;
     }
     h1 {
-      font-size: 800%;
+      font-size: 1000%;
       border: black solid 2px;
       background-color: white;
       width: 50%;
@@ -130,7 +130,8 @@ module.exports.daysSince = (event, context, callback) => {
     <div id="header">
       ${locationSelect}
     </div>
-
+   <div class="center">
+   
     <h1>${days}</h1>
 
     <h3>
