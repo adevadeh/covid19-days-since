@@ -77,7 +77,7 @@ module.exports.daysSince = (event, context, callback) => {
     h1 {
       font-size: 800%;
       border: black solid 2px;
-      background-color: #121389;
+      background-color: white;
       width: 50%;
       margin: 5% 25%;
     }
