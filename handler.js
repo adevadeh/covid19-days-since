@@ -64,13 +64,13 @@ module.exports.daysSince = (event, context, callback) => {
 <head>
   <meta charset="utf-8">
 
-  <title>COVID-19 Info - Days Since Last Infection</title>
-  <meta name="description" content="COVID-19 Info">
+  <title>COVID-19 - Days Since Last Infection</title>
+  <meta name="description" content="COVID-19 Days Since">
   <meta name="author" content="Kudelabs">
 
  <style type="text/css">
     body {
-      background-color: rgb(221,221,241);
+      background-color: rgb(249,249,253);
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 18pt;
     }
@@ -135,7 +135,7 @@ module.exports.daysSince = (event, context, callback) => {
     <h1>${days}</h1>
 
     <h3>
-      days since the last new infection in</br>
+      Days since last new infection in</br>
       <strong>${selectedLocation}</strong>
     </h3>
 
@@ -143,8 +143,8 @@ module.exports.daysSince = (event, context, callback) => {
 
     </div>
     <p class="extra">
-      last updated: ${updated_at}</br>
-      sources: <br/>
+      Last updated: ${updated_at}</br>
+      Sources: <br/>
       &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/CSSEGISandData/COVID-19">https://github.com/CSSEGISandData/COVID-19</a><br/>
       &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/BlankerL/DXY-COVID-19-Data">https://github.com/BlankerL/DXY-COVID-19-Data</a>
     </p>
